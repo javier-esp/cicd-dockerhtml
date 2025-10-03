@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-
+# agregando el workflow para que se ejecute en cada push a la rama main
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
