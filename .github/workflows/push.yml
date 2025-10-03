@@ -1,0 +1,23 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        run: | 
+          docker build -t minginx:latest .
+
+      - name: Login and push to Docker Hub
+        run: |
+          docker login -u elsoloeres -p  ${{ secrets.TOKEN_DOCKER_HUB }}
+          docker tag minginx:latest elsoloeres/minginx:latest
+          docker push elsoloeres/minginx:latest

@@ -1,0 +1,17 @@
+services:
+  # nginx:
+  #   ports:
+  #     - "8081:80"
+  #   image: nginx
+  #   volumes:
+  #     - ./server1/:/usr/share/nginx/html/
+  # nginx2:
+  #   ports:
+  #     - "8080:80"
+  #   image: nginx
+  #   volumes:
+  #     - ./server2/dist/:/usr/share/nginx/html/
+  nginxpaginaweb:
+    ports:
+      - "8081:80"
+    image: minginx
