@@ -24,5 +24,5 @@ services:
   nginxpaginaweb:
     ports:
       - "8081:80"
-    image: elsoloeres/minginx:latest
+    image: tu_nombre_usuario_dh/minginx:latest
 ```
